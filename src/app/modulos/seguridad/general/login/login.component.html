@@ -1,0 +1,54 @@
+<div class="section"></div>
+<main>
+    <div class="section"></div>
+    <div class="container center">
+        <div class="z-depth-1 grey lighten-4 row"
+            style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+
+            <form class="col s12" [formGroup]="dataForm">
+                <div class='row'>
+                    <div class='col s12'>
+                    </div>
+                </div>
+
+                <div class='row'>
+                    <div class='input-field col s12'>
+                        <input formControlName="usuario" class='validate' type='text' name='usuario' id='usuario' />
+                        <label for='usuario'>Ingrese su usuario</label>
+                        <div class="errorValidation">
+                            <label *ngIf="dataForm.controls['usuario'].errors && (dataForm.controls['usuario'].dirty || dataForm.controls['usuario'].touched)">
+                                El nombre de usuario no cumple con los requisitos
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='row'>
+                    <div class='input-field col s12'>
+                        <input formControlName="password" class='validate' type='password' name='password' id='password' />
+                        <label for='password'>Ingrese su contraseña</label>
+                        <div class="errorValidation">
+                            <label *ngIf="dataForm.controls['password'].errors && (dataForm.controls['password'].dirty || dataForm.controls['password'].touched)">
+                                la contraseña no cumple con los requisitos
+                            </label>
+                        </div>
+                    </div>
+                    <label style='float: right;'>
+                        <a routerLink="/seguridad/recuperar-password" class='pink-text'><b>¿Olvidó su contraseña?</b></a>
+                    </label>
+                </div>
+
+                <br />
+
+                <div class='row center'>
+                    <button [disabled]="dataForm.controls['usuario'].errors || dataForm.controls['password'].errors" type='button' (click)="login()" name='btn_login'
+                        class='col s12 btn btn-large waves-effect indigo'>Identificar</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="section"></div>
+    <div class="section"></div>
+</main>

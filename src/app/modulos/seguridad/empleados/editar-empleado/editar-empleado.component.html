@@ -1,0 +1,63 @@
+<div class="row">
+    <div class="col s12">
+        <div class="row">
+            <div class="col s12 center-align">
+                <img class="logo" src="/assets/images/portada/logo.png">
+            </div>
+        </div>
+    </div>
+</div>
+
+<h4 class="center align"><strong>Editar Registro</strong></h4>
+<div class="row">    
+    <form [formGroup]="dataForm" class="col s12">
+        <input type="hidden" formControlName="id" />
+        <div class="row">
+            <div class="input-field col s4">
+                <input formControlName="nombres" id="txtNombre" type="text">
+                <label class="active" for="txtNombre">Nombres</label>
+            </div>
+            <div class="input-field col s4">
+                <input formControlName="apellidos" id="txtApellido" type="text">
+                <label class="active" for="txtApellido">Apellidos</label>
+            </div>
+            <div class="input-field col s4">
+                <input formControlName="telefono" id="txtTelefono" type="text">
+                <label class="active" for="txtTelefono">Telefono</label>
+            </div>
+            <div class="row">
+                <div class="input-field col s4">
+                    <input formControlName="direccion" id="txtDireccion" type="text">
+                    <label class="active" for="txtDireccion">Dirección</label>
+                </div>
+
+                <div class="input-field col s4">
+                    <input formControlName="email" id="txtEmail" type="email">
+                    <label class="active" for="txtEmail">Email</label>
+                </div>
+                <div class="input-field col s2">
+                    <input formControlName="edad" id="txtEdad" type="text">
+                    <label class="active" for="txtEdad">Edad</label>
+                </div>
+                
+            <div class="row">
+                 <div class="input-field col s3">
+                    <input formControlName="sueldo" id="Sueldo" type="text">
+                    <label class="active" for="Sueldo">Sueldo</label>
+                </div>                    
+                    
+                <div class="input-field col s4">
+                    <input formControlName="empresaId" id="Empresa" type="text">
+                    <label class="active" for="Empresa">Empresa</label>
+                </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <button type="button" class="btn btn-primary red" (click)="GuardarEmpleado()"><i class="material-icons left">add</i>Guardar</button>
+                        &nbsp;<a class="btn btn-warning orange" routerLink="/seguridad/lista-empleado"><i class="material-icons left">cancel</i>Cancelar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

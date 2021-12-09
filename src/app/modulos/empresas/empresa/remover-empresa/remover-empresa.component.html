@@ -1,0 +1,56 @@
+<div class="row">
+    <div class="col s12">
+        <div class="row">
+            <div class="col s12 center-align">
+                <img class="logo" src="/assets/images/portada/logo.png">
+            </div>
+        </div>
+    </div>
+</div>
+<h4 class="center align"><strong>Remover Registro</strong></h4>
+<div class="row">
+    <div class="row">
+        <div class="input-field col s10">
+            <strong>¿Está seguro de eliminar el siguiente registro?</strong>
+            <br>
+            <br>
+            <div class="row">
+                <table class="centered responsive-table striped">
+                    <thead>
+                        <tr>
+                            <th>
+                                Id
+                            </th>
+                            <th>
+                                Razón Social
+                            </th>
+                            <th>
+                                NIT
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <td>
+                            {{id}}
+                        </td>
+                        <td>
+                            {{razonsocial}}
+                        </td>
+                        <td>
+                            {{nit}}
+                        </td>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <button type="button" class="btn btn-primary red" (click)="EliminarRegistro()"><i
+                        class="material-icons left">delete</i>Eliminar</button>
+                &nbsp;<a class="btn btn-warning orange" routerLink="/empresas/listar-empresa"><i
+                        class="material-icons left">cancel</i>Cancelar</a>
+            </div>
+        </div>
+    </div>
+</div>

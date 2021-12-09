@@ -1,0 +1,56 @@
+<div class="row">
+    <div class="col s12">
+        <div class="row">
+            <div class="col s12 center-align">
+                <img class="logo" src="/assets/images/portada/logo.png">
+            </div>
+        </div>
+    </div>
+</div>
+<h4 class="center align"><strong>Eliminar Registro</strong></h4>
+<div class="row">
+    <div class="row">
+        <div class="input-field col s10">
+            <strong>¿Está seguro de eliminar el siguiente registro?</strong>
+            <br>
+            <ul>
+                <li>
+                   <strong>Id: </strong>{{id}}
+                </li>
+                <li>
+                    <strong>Nombres: </strong>{{nombres}}
+                </li>
+                <li>
+                    <strong>Apellidos: </strong>{{apellidos}}
+                </li>
+                <li>
+                    <strong>Teléfono: </strong>{{telefono}}
+                </li>
+                <li>
+                    <strong>Dirección: </strong>{{direccion}}
+                </li>
+                <li>
+                    <strong>Email: </strong>{{email}}
+                </li>
+                <li>
+                    <strong>Edad: </strong>{{edad}}
+                </li>
+                <li>
+                    <strong>Sueldo: </strong>{{sueldo}}
+                </li>
+                <li>
+                    <strong>Empresa: </strong>{{empresaId}}
+                </li>
+            </ul>
+            
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <button type="button" class="btn btn-primary red" (click)="RemoverEmpleado()"><i
+                        class="material-icons left">delete</i>Eliminar</button>
+                &nbsp;<a class="btn btn-warning orange" routerLink="/seguridad/lista-empleado"><i
+                        class="material-icons left">cancel</i>Cancelar</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<nav>
+  <div class="nav-wrapper blue-grey darken-1">
+    <a routerLink="home" class="brand-logo">Inicio</a>
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li *ngIf="!activeSession"><a routerLink="seguridad/login">Login</a></li>
+      <li *ngIf="activeSession"><a routerLink="seguridad/logout">Logout</a></li>
+      <li *ngIf="activeSession"><a routerLink="empresas/listar-empresa">Empresas</a></li>
+      <li *ngIf="activeSession"><a routerLink="seguridad/lista-empleado">Empleados</a></li>
+    </ul>
+  </div>
+</nav>
+
+<ul class="sidenav" id="mobile-demo">
+  <li *ngIf="!activeSession"><a routerLink="seguridad/login">Login</a></li>
+  <li *ngIf="activeSession"><a routerLink="seguridad/logout">Logout</a></li>
+  <li *ngIf="activeSession"><a routerLink="empresas/listar-empresa">Empresas</a></li>
+  <li *ngIf="activeSession"><a routerLink="seguridad/lista-empleado">Empleados</a></li>
+</ul>

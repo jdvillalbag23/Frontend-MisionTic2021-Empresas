@@ -1,0 +1,12 @@
+.cardSize{
+    width: 90px;
+    height: 350px;    
+}
+.card-title{
+    color: white !important;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    font-size: 20px;
+    padding: 5px !important; 
+    font-weight: bold;  
+}

@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col s12">
+        <div class="row">
+            <div class="col s12 center-align">
+                <img class="logo" src="/assets/images/portada/logo.png">
+            </div>
+        </div>
+    </div>
+</div>
+<h4 class="center align"><strong>Crear Registro</strong></h4>
+<div class="row">
+    <form [formGroup]="dataForm" class="col s12">
+        <div class="row">
+            <div class="input-field col s4">
+                <input formControlName="razonsocial" id="txtrazon" type="text">
+                <label for="txtrazon">Razón Social</label>
+            </div>
+            <div class="input-field col s4">
+                <input formControlName="nit" id="txtNit" type="text">
+                <label for="txtNit">Nit</label>
+            </div>                            
+                <div class="row">
+                    <div class="input-field col s12">
+                        <button type="button" class="btn btn-primary red" (click)="GuardarRegistro()"><i class="material-icons left">add</i>Guardar</button>
+                        &nbsp;<a class="btn btn-warning orange" routerLink="/empresas/listar-empresa"><i class="material-icons left">cancel</i>Cancelar</a>
+                    </div>
+                </div>
+            </div>       
+    </form>
+</div>

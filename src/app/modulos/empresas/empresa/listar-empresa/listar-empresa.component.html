@@ -1,0 +1,46 @@
+<h2>Listado de Empresas</h2>
+
+    <table class="centered responsive-table striped">
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    Razón Social
+                </th>
+                <th>
+                    NIT
+                </th>                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let e  of empresaList | paginate: { itemsPerPage: pageSize,
+            currentPage: p,
+            totalItems: totalPages }">
+                <td>
+                    {{e.id}}
+                </td>
+                <td>
+                    {{e.razonsocial}}
+                </td>
+                <td>
+                    {{e.nit}}
+                </td>
+                <td>
+                    <a routerLink="/empresas/editar-empresa/{{e.id}}" class="btn btn warning brown"><i class="material-icons left">border_color</i>Editar</a>&nbsp;
+                    <a routerLink="/empresas/remover-empresa/{{e.id}}" class="btn btn warning grey"><i class="material-icons left">delete</i>Eliminar</a>
+                </td>                
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <pagination-controls (pageChange)="p = $event" previousLabel="Anterior"
+                    nextLabel="Siguiente"></pagination-controls>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+<br>
+<a routerLink="/empresas/crear-empresa" class="btn btn-primary red"><i class="material-icons left">add</i>Agregar Empresa</a>
+<br>
+<br>

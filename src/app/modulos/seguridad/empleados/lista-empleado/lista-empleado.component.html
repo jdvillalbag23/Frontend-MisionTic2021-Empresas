@@ -1,0 +1,59 @@
+<h3>Listado de Empleados</h3>
+
+    <table class="centered responsive-table striped">
+        <thead>
+            <tr>                
+                <th>
+                    Nombres
+                </th>
+                <th>
+                    Apellidos
+                </th>                
+                <th>
+                    Direccion
+                </th>
+                <th>
+                    Correo
+                </th>
+                <th>
+                    Empresa
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let e  of employList | paginate: { itemsPerPage: pageSize,
+                currentPage: p,
+                totalItems: totalPages }">                
+                <td>
+                    {{e.nombres}}
+                </td>
+                <td>
+                    {{e.apellidos}}
+                </td>                
+                <td>
+                    {{e.direccion}}
+                </td>
+                <td>
+                    {{e.email}}
+                </td>
+                <td>
+                    {{e.empresa?.razonsocial}}
+                </td>
+                <td>
+                    <a routerLink="/seguridad/editar-empleado/{{e.id}}" class="btn btn warning brown"><i class="material-icons left">border_color</i>Editar</a>&nbsp;
+                    <a routerLink="/seguridad/remover-empleado/{{e.id}}" class="btn btn warning grey"><i class="material-icons left">delete</i>Eliminar</a>
+                </td> 
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <pagination-controls (pageChange)="p = $event" previousLabel="Anterior"
+                    nextLabel="Siguiente"></pagination-controls>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+<br>
+<a routerLink="/seguridad/crear-empleado" class="btn btn-primary red"><i class="material-icons left">add</i>Agregar
+    Empleado</a>
+<br>
+<br>
